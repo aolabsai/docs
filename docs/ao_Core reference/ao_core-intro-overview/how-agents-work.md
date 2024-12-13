@@ -16,7 +16,7 @@ After agent instantiation, all operations are carried out at the Agent level (an
 
 ## `agent.next_state`
 
-the main method! Given a binary string as input in the proper shape (FAC=3 for the clam, 28x28=784 for MNIST), .next_state advances the agent to the next state and returns an output. Labels, instincts, and other learning and control settings can be applied.
+the main method! Given a binary string as input in the proper shape (FAC=3 for the clam, 28x28=784 for MNIST), .next\_state advances the agent to the next state and returns an output. Labels, instincts, and other learning and control settings can be applied.
 
 # Agent Attributes
 
