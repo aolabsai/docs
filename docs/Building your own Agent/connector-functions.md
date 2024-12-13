@@ -10,12 +10,12 @@ metadata:
 next:
   description: ''
 ---
-- full_conn
-- forward_full_conn
-- forward_forward_conn
-- rand_conn
-  - <br />
-- nearest_neighbour_conn
-  - <br />
-- rectangular_conn
-  - <br />
+* full\_conn
+* forward\_full\_conn
+* forward\_forward\_conn
+* rand\_conn
+  * <br />
+* nearest\_neighbour\_conn
+  * <br />
+* rectangular\_conn
+  * <br />
