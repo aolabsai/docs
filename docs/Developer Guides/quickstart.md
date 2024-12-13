@@ -84,7 +84,7 @@ Modify the Arch script to suit your application needs. This involves changing th
 
 Here's a tutorial to walk you through the steps:
 
-<TutorialTile backgroundColor="#8701f4" emoji="🛠️" id="66d6cda01fab5100441176ff" link="https://docs.aolabs.ai/v0.1.2/recipes/create-a-custom-arch" slug="create-a-custom-arch" title="Create a custom Arch" />
+<TutorialTile backgroundColor="#8701f4" emoji="🛠️" id="66d6cda01fab5100441176ff" link="https://docs.aolabs.ai/v0.1.2/recipes/create-a-custom-arch" slug="create-a-custom-arch" title="Create a custom Arch" /> 
 
 Designing your own Arch is something we're especially happy to help with! [Chat on discord](https://discord.gg/Zg9bHPYss5) or book a [meeting](https://calendly.com/aee/meeting).
 
