@@ -16,21 +16,7 @@ In reinforcement learning, the reward or loss function is ex machina to the lear
 
 **In effect,** the reward is determined by a human-set loss or objective function (eg. Pong: -1 point if ball lands outside, +2 points if scores on opponents side, etc.). 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/779485a-Artboard_163x.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "400px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="400px" src="https://files.readme.io/779485a-Artboard_163x.png" />
 
 ### Effectiveness & Limitations
 
@@ -42,25 +28,11 @@ Our approach is a different perspective. It enables Agents that learn via induct
 
 **In effect**, the reward is determined by an Agent's lookup table, which is an Agent's past history of states, annotated by C-neurons as pain or pleasure for negative or positive reinforcement. 
 
-- The human designer determines the Agent's reward function **_at once remove_**, through pre-setting the C neurons.  
-- The reward is a function of the C neurons and an Agent's live experience in an environment, allowing it to be live-trained, as any activations of C neurons (like instincts) will trigger the Agent to self-associate by adding the observation-action (input-output) pair associated with its C activations to its lookup table (to repeat if pleasurable and avoid if painful).
-- Human control at a higher level of abstraction through Agent learning at lower level.
+* The human designer determines the Agent's reward function ***at once remove***, through pre-setting the C neurons.  
+* The reward is a function of the C neurons and an Agent's live experience in an environment, allowing it to be live-trained, as any activations of C neurons (like instincts) will trigger the Agent to self-associate by adding the observation-action (input-output) pair associated with its C activations to its lookup table (to repeat if pleasurable and avoid if painful).
+* Human control at a higher level of abstraction through Agent learning at lower level.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f40bf07-Artboard_173x.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="500px" src="https://files.readme.io/f40bf07-Artboard_173x.png" />
 
 ### Effectiveness & Limitations
 
@@ -70,4 +42,4 @@ AO Agents tend to work as well as the Agent Arch reflects its environmental appl
 
 In a sense, we're talking about symbolic AI vs pure connectionist systems, as our Agents have a definite symbolic shape defined in their Arch while also being neural networks. Approaching AI this way requires thoughtfulness regarding the design of the Agent --that its Arch reflects its environmental application-- instead of models hinged on training data.
 
-That we're talking about a hybrid symbolic-connectionist approach implies a bottom-up direction to our development, as we need to build from the bottom-up, iteratively from simple agent Archs, like our _hello, world_ clam-level Agent to more complicated varieties. Phylogenetics is a helpful guide here.
+That we're talking about a hybrid symbolic-connectionist approach implies a bottom-up direction to our development, as we need to build from the bottom-up, iteratively from simple agent Archs, like our *hello, world* clam-level Agent to more complicated varieties. Phylogenetics is a helpful guide here.
