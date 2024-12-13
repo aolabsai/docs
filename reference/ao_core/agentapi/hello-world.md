@@ -24,29 +24,15 @@ The first input (F) is set to trigger the Clam Agent's instincts, as Food would,
 
 Here's a visual--
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/42221ed-Artboard_102x.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="500px" src="https://files.readme.io/42221ed-Artboard_102x.png" />
 
-**Your _Hello, World_ challenge**-- using the Agent Invoke API call or through this [front-end demo](https://aolabs.streamlit.app/) if you need a visual, can you train/retrain the Clam Agent as per your will? Can you do so using only Food (F) _instead_ of output labels?
+**Your*Hello, World* challenge**-- using the Agent Invoke API call or through this [front-end demo](https://aolabs.streamlit.app/) if you need a visual, can you train/retrain the Clam Agent as per your will? Can you do so using only Food (F) *instead* of output labels?
 
 Then you can master bigger, more evolved Agents that can self-associate beyond 3-to-1!
 
 > 👍 9 neurons & beyond!  :rocket:
-> 
-> _It's just 1 config _(the Arch) to create Agents customized to the number of inputs, outputs, and reward signals in your application data model and to get started we have a \[[repo of arch reference designs](https://github.com/aolabsai/archs).
+>
+> *It's just 1 config* (the Arch) to create Agents customized to the number of inputs, outputs, and reward signals in your application data model and to get started we have a \[[repo of arch reference designs](https://github.com/aolabsai/archs).
 
 ### Clam Agent Arch in Depth
 
