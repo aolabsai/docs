@@ -10,4 +10,4 @@ metadata:
 next:
   description: ''
 ---
-- ao.agent must be backwards compatiable with all ao.archs
+* ao.agent must be backwards compatiable with all ao.archs
