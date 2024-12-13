@@ -38,6 +38,6 @@ When you have an agent, it can be given inputs and will return outputs, all in b
 
 ### `agent.next_state( )`
 
-Both training and inference/application happen through the .next_state method. If a LABEL is included with the input, or if the INPUT triggers any of the agent's instincts, learning occurs in the affected neurons, as follows:
+Both training and inference/application happen through the .next\_state method. If a LABEL is included with the input, or if the INPUT triggers any of the agent's instincts, learning occurs in the affected neurons, as follows:
 
 `agent.next_state( INPUT, LABEL=[] )`
