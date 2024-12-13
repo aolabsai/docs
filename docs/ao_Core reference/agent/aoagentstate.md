@@ -19,20 +19,13 @@ A numpy array (integer data type) that stores the entire history of an agent in 
 The shape is states by neurons; the rows of the array represent states and the number of columns is set by the total number of neurons of the agent.
 
 # Example
-[block:code]
-{
-  "codes": [
-    {
-      "code": ">>> agent.story.shape\n[100000, 9]      # using our basic clam as the example\n\n>>> agent.story[11, 2]\n[0, 1, 0, 0, 1, 1, 0, 1, 0]     # displays the 12th state of the 3rd neuron",
-      "language": "python"
-    }
-  ]
-}
-[/block]
 
-[block:callout]
-{
-  "type": "info",
-  "body": "The number of rows is preallocated to `100000` and is populated in descending chronological order (so the oldest state is indexed first)."
-}
-[/block]
+```python
+>>> agent.story.shape
+[100000, 9]      # using our basic clam as the example
+
+>>> agent.story[11, 2]
+[0, 1, 0, 0, 1, 1, 0, 1, 0]     # displays the 12th state of the 3rd neuron
+```
+
+> 📘 The number of rows is preallocated to `100000` and is populated in descending chronological order (so the oldest state is indexed first).
