@@ -10,4 +10,4 @@ metadata:
 next:
   description: ''
 ---
-Presently all the Arch logic is contained in the inidivusal archs. We need to make a proper class of it in ao_core that's reconfigure to support a proper config type object.
+Presently all the Arch logic is contained in the inidivusal archs. We need to make a proper class of it in ao\_core that's reconfigure to support a proper config type object.
