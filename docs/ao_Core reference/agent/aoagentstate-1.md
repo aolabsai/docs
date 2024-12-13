@@ -19,13 +19,12 @@ Stores the count of the current state as an integer.
 The value is incremented by the `.next_state` method.
 
 # Example
-[block:code]
-{
-  "codes": [
-    {
-      "code": ">>> agent.state\n10\n\n>>> angent.next_state(INPUT)\n>>> agent.state\n11\n",
-      "language": "python"
-    }
-  ]
-}
-[/block]
+
+```python
+>>> agent.state
+10
+
+>>> angent.next_state(INPUT)
+>>> agent.state
+11
+```
