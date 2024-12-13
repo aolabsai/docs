@@ -35,16 +35,16 @@ If **`LABEL = "a label in binary"`** is provided, the Agent's Output will match 
 
 ### Automatic Learning (via Instincts)
 
-When **`INSTINCTS = True`**, if Input triggers Agent's Instincts, the Agent will learn to associate the current Input with _its previous Output_ as from the Agent's perspective it was the previous output that lead it to the input which triggered its instincts. **In other words, training without labels! The Agent self-labels, self-associates.** 
+When **`INSTINCTS = True`**, if Input triggers Agent's Instincts, the Agent will learn to associate the current Input with *its previous Output* as from the Agent's perspective it was the previous output that lead it to the input which triggered its instincts. **In other words, training without labels! The Agent self-labels, self-associates.** 
 
 ### Training Notes:
 
-- Labels override Instincts.
-- If the trigger is positive (pleasure) then it will reinforce the associated behavior; if the trigger is negative (pain), the Agent will do the opposite of output next time, diminishing or disassociating the behavior.
-- You pre-program instincts in Agent Arch, triggered by fixed/static conditions on Input or other neurons instead of pre-training; [details here](https://docs.aolabs.ai/docs/arch-config).
+* Labels override Instincts.
+* If the trigger is positive (pleasure) then it will reinforce the associated behavior; if the trigger is negative (pain), the Agent will do the opposite of output next time, diminishing or disassociating the behavior.
+* You pre-program instincts in Agent Arch, triggered by fixed/static conditions on Input or other neurons instead of pre-training; [details here](https://docs.aolabs.ai/docs/arch-config).
 
 > 📘 Sequenced Learning
-> 
+>
 > By default, Agents learn sequenced or time series data-- their next move is informed by their immediate past action. 
-> 
+>
 > If your data are not in a stream or consistent sequence, such as a table of information (our Netbox example), then set **`US = True`** to introduce a random binary state as reset between Agent invocations.
