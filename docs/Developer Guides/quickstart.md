@@ -113,4 +113,4 @@ Here are some high-level sketches of applications we're exploring as within scop
 
 <HTMLBlock>{`
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVM92gM2Y=/?moveToViewport=151636,-78346,14005,5440&embedId=26026240606" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
-`}</HTMLBlock>
+`}</HTMLBlock> 
