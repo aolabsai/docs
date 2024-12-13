@@ -40,7 +40,7 @@ Designing an AI algorithm today involves extracting features from data to build 
 
 Thus, the bottlenecks are now in data (Andrew Ng is very eloquent on this subject of data-centric AI). And the dream of most people, of course, is an AI that can perform across a range of tasks as general as expected from at least humans.
 
-With the great AIs we have today-- ChatGPT or other LLMs, genAI, even robotics-- who gets to decide what is training data for these machines? Who gets to pre-train them and what guarantee is there that the bias of the pre-training will match the expectations of the user? Who is setting the context for _your_ AI experience?
+With the great AIs we have today-- ChatGPT or other LLMs, genAI, even robotics-- who gets to decide what is training data for these machines? Who gets to pre-train them and what guarantee is there that the bias of the pre-training will match the expectations of the user? Who is setting the context for *your* AI experience?
 
 At a higher level, we can definitively say that intelligence involves somehow determining what data should be used for training, as that's an aspect of intelligence we exercise when building AI, yet this aspect is neglected in our artificial design of intelligence which remains limited by our ability to define its data.
 
@@ -55,7 +55,7 @@ Where status quo AI is a learned input-output mapping in the form of a parametri
 To summarize, our AIs are neural state machines that learn to associate input-output pairs relative to their own dynamic inner states (that are determined by their instincts set by the designer) such that as agents they can be classically conditioned to perform general behaviors. Our v0.1.0 is currently at the level of a clam. Going up the phylogenetic tree underpins our whole methodology and is built into our open source strategy.
 
 > 📘 New AI with Old Research
-> 
+>
 > Quite some unpacking is needed as this code is based on years of research from a branch of algorithm that divergent from deep learning back in the 1980s, so thank you for being patient with the rest of this guide.
 
 ### The Comparison: Input-Output Mappings vs. Associations
@@ -77,7 +77,7 @@ Our systems learn a unique input-output mapping in the same form, though more ap
 Where **A** and **Action** are arbitrary input-output pairs, and **instinct F** is something like "food" set by a designer as a trigger for learning or reward. F can then be paired with A for training purposes. A comparison to biological intelligence is helpful at this point--
 
 > 🚧 Not convinced of this comparison?
-> 
+>
 > Or maybe this seems similar to reinforcement learning? [Let's dig into that here before you continue, please.](https://docs.aolabs.ai/docs/on-the-differences-from-reinforcement-learning)
 
 ### Lessons from Biological General Intelligence
@@ -91,11 +91,11 @@ Consider,
 | Finger snap | Sit    | Treats                       | Hypothetical Pet Dog |
 | A           | Action | Instinct trigger F           | AO Labs AI           |
 
-where, if the system was a dog, A is the snapping of the fingers, Action is when the dog sits, and F is food given to condition proper action[^2].
+where, if the system was a dog, A is the snapping of the fingers, Action is when the dog sits, and F is food given to condition proper action\[^2].
 
 Thus the dog learns this snap-sit behavior from the trainer who paired F and A, such that Action has come to be paired with A in the dogs internal state; the dog is more likely to respond with Action to A as opposed to other things C in the environment.
 
-Importantly, the dog learns this association with respect to F, the instinct of F being a part of the dog. Thus, the dog is an **agent** with a necessarily vested interest in its “intelligent” act, not simply an input-output policy or model of intelligent acts measured externally as structured data. The dog as an agent is not optimizing for an externally set objective function[^1], but instead it is seeking to optimize its internal state, constantly, at every level of its being; only through human training does the dog’s optimization around its internal state come to hold the human-desired intelligent association of snap-sit, "roll over"-rolls over, etc.
+Importantly, the dog learns this association with respect to F, the instinct of F being a part of the dog. Thus, the dog is an **agent** with a necessarily vested interest in its “intelligent” act, not simply an input-output policy or model of intelligent acts measured externally as structured data. The dog as an agent is not optimizing for an externally set objective function\[^1], but instead it is seeking to optimize its internal state, constantly, at every level of its being; only through human training does the dog’s optimization around its internal state come to hold the human-desired intelligent association of snap-sit, "roll over"-rolls over, etc.
 
 It is important to note, the human training must act on the dog's instincts (through treats, etc.) otherwise it would have no effect or substance to the dog. That humans can also understand the chain of associations which underpin a dog’s intelligent behavior (like ball-fetch) is why we can trust dogs in ways where current AI systems would only be input-output blackbox mappings (eg. deep learning).
 
@@ -107,24 +107,11 @@ Of course, dogs are extremely complicated agents, and the above association is c
 
 We initially focused on worms, specifically C Elegans, as they can also be classically condition to learn a variety of associations all while having a fixed number of neurons (all C Elegans has 302 neurons).
 
-However it is helpful to start with an even simpler creature than worms, the humble _clam_-- clams in the wild usually close up when they sense shadows, due to predation and other factors (a shadow might be a predator coming by!). Clams in captivity, though, have learned to stay open around shadows; they come to associate, relative to their own experiences, shadows with humans dumping food in their tanks.
+However it is helpful to start with an even simpler creature than worms, the humble *clam*-- clams in the wild usually close up when they sense shadows, due to predation and other factors (a shadow might be a predator coming by!). Clams in captivity, though, have learned to stay open around shadows; they come to associate, relative to their own experiences, shadows with humans dumping food in their tanks.
 
 The simplest formulation of this experiment is our basic clam, our "hello, world" program, and it works very well. We're excited to have you try it out. The code is in our repository, [folder Demos](https://github.com/aolabsai/ao_core/tree/main/Demos). Check out the [Basic Clam guide](https://docs.aolabs.ai/docs/basic-clam), and we also have a [step-by-step code walk-through should you get lost](https://docs.aolabs.ai/recipes/basic-clam-demo).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ec388cc-Clam.png",
-        "Clam.png",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/ec388cc-Clam.png" />
 
 ### MNIST
 
@@ -134,25 +121,12 @@ If a clam takes in multiple input channels (or types, such as shadows, temperatu
 
 MNIST is like a one channel clam.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1c48974-MNIST_Arch.png",
-        "MNIST Arch.png",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/1c48974-MNIST_Arch.png" />
 
 ***
 
 ### Footnotes
 
-[^1]\: Viewed this way, AI systems that rely on external cost or objective functions are like dogs that are fetching the stick for the stick itself-- quite absurd, or in the case of AI, as good as we can structure the data (big data sticks), beyond which we question robustness (hallucinations) and qualia.
+\[^1]\: Viewed this way, AI systems that rely on external cost or objective functions are like dogs that are fetching the stick for the stick itself-- quite absurd, or in the case of AI, as good as we can structure the data (big data sticks), beyond which we question robustness (hallucinations) and qualia.
 
-[^2]\: Ball-Fetch was the previously used example, however a few people, notably @futha have pointed out that certain dogs have a strong instinctual drive to seek our objects without needing training from humans with treats. And certainly dogs also co-evolved with humans (domestication), so no doubt they have instinctual responses to the impressions we can give off (i.e. they can read our expressions and tones of voice). That's why starting with simpler creatures, clams and C Elegans, is necessary.
+\[^2]\: Ball-Fetch was the previously used example, however a few people, notably @futha have pointed out that certain dogs have a strong instinctual drive to seek our objects without needing training from humans with treats. And certainly dogs also co-evolved with humans (domestication), so no doubt they have instinctual responses to the impressions we can give off (i.e. they can read our expressions and tones of voice). That's why starting with simpler creatures, clams and C Elegans, is necessary.
