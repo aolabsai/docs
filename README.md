@@ -1,7 +1,7 @@
 # Docs
 Documentation for ao\_core, ao\_arch, and our api.
 
-This repo is synced with our [ReadMe Documentation](https://docs.aolabs.ai/#/) with their bi-directional sync feature. Some information on how editing with git and ReadMe work together can be found on their page on [this topic](https://docs.readme.com/main/docs/editing-with-bi-directional-sync).
+This repo is synced with our [ReadMe Documentation](https://docs.aolabs.ai/#/) with their bi-directional sync feature. Some information on how editing with git and ReadMe work together can be found on [ReadMe's docs](https://docs.readme.com/main/docs/editing-with-bi-directional-sync).
 
 If a branch is made for a new version of documentation, it will not show up on ReadMe until a version with the same name is created through the ReadMe interface.
 
