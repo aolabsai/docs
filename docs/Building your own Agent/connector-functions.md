@@ -17,7 +17,7 @@ next:
 * forward\_forward\_conn
   * TODO
 * rand\_conn
-  * connections between neurons are formed randomly when using this connector function 
+  * connections between neurons are formed randomly when using this connector function
   * `param\_1: int` number of connections between neurons in the input layer and neurons in the internal layer
   * `param\_2: int` number of connections between neurons within the internal layer
   * `param\_3: int` number of connections between neurons in the internal layer and output layer
@@ -37,4 +37,4 @@ next:
   * `param\_3: int` x dimension size of grid
   * `param\_4: int` y dimension size of grid
   * `param\_5: bool` True if output neurons are connected to corresponding input neurons
-  * `param\_6: int` number of random connections between internal and output neurons (optional if input size mathches output size, required if they do not match)
+  * `param\_6: int` number of random connections between internal and output neurons (optional if input size matches output size, required if they do not match)
