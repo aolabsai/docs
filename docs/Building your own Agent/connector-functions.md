@@ -29,7 +29,7 @@ next:
   * `param\_3: int` x dimension size of grid
   * `param\_4: int` y dimension of grid
   * `param\_5: bool` True if output neurons are connected to corresponding input neurons
-  * `param\_6: int` number of random connections between internal and output neurons (optional if input size mathches output size, required if they do not match)
+  * `param\_6: int` number of random connections between internal and output neurons (optional if input size matches output size, required if they do not match)
 * rectangular\_conn
   * TODO
   * `param\_1: int` distance along x-axis for forming connections
