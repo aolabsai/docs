@@ -43,11 +43,11 @@ When **`INSTINCTS = True`**, if Input triggers Agent's Instincts, the Agent will
 * If the trigger is positive (pleasure) then it will reinforce the associated behavior; if the trigger is negative (pain), the Agent will do the opposite of output next time, diminishing or disassociating the behavior.
 * You pre-program instincts in Agent Arch, triggered by fixed/static conditions on Input or other neurons instead of pre-training; [details here](https://docs.aolabs.ai/docs/arch-config).
 
-### Agent Delete
+### Miscellaneous Functions
 
-* Deletion: Removes the agent from the database and temporarily stores it in buffer memory for potential recovery.
-* Retrieval: A deleted agent can be restored from buffer memory if needed.
-* Fetching Agent History: Retrieves the previous states of an agent. 
+* Agent Deletion (delete_agent): Removes the agent from the database and temporarily stores it in buffer memory for potential recovery.
+* agent Retrieval (retrieve_agent): A deleted agent can be restored from buffer memory if needed.
+* Fetching Agent History (story): Retrieves the previous states of an agent. 
 
 > 📘 Sequenced Learning
 >
