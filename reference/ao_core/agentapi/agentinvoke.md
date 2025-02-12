@@ -47,6 +47,7 @@ When **`INSTINCTS = True`**, if Input triggers Agent's Instincts, the Agent will
 
 * Deletion: Removes the agent from the database and temporarily stores it in buffer memory for potential recovery.
 * Retrieval: A deleted agent can be restored from buffer memory if needed.
+* Fetching Agent History: Retrieves the previous states of an agent. 
 
 > 📘 Sequenced Learning
 >
