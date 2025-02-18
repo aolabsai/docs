@@ -711,7 +711,7 @@
                         "description": "ALL OPTIONAL-- parameters for fine-tuned control"
                     }
                 },
-                    "x-readme-ref-name": "KennelCreate"
+                "x-readme-ref-name": "KennelCreate"
             },
             "AgentResponse": {
                 "type": "object",
