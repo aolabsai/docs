@@ -203,12 +203,14 @@
                                 "x-readme-ref-name": "KennelCreate"
                             },
                             "examples": {
-                                "Basic Clam Kennel - fully connected neurons": {
+                                "Basic Clam Kennel": {
                                     "value": {
                                         "kennel_name": "TEST-Clamologist - full_conn",
-                                        "arch_i": "[1, 1, 1]",
-                                        "arch_z": "[1]",
-                                        "connector_function": "full_conn",
+                                        "arch":{
+                                            "arch_i": "[1, 1, 1]",
+                                            "arch_z": "[1]",
+                                            "connector_function": "full_conn"
+                                        },
                                         "description": "the simplest, atomic arch reference design, our hello, world",
                                         "permissions": "free and open as the sea!"
                                     }
@@ -216,18 +218,12 @@
                                 "Basic Clam Kennel - randomly connected neurons": {
                                     "value": {
                                         "kennel_name": "TEST-Clamologist - rand_conn",
-                                        "arch_i": "[1, 1, 1]",
-                                        "arch_z": "[1]",
-                                        "connector_function": "rand_conn",
-                                        "connector_parameters": "[2, 2, 2, 1]",
-                                        "description": "the simplest, atomic arch reference design, our hello, world",
-                                        "permissions": "free and open as the sea!"
-                                    }
-                                },
-                                "Basic Clam Kennel - with custom instincts": {
-                                    "value": {
-                                        "kennel_name": "TEST-Clamologist - with custom instincts",
-                                        "arch_URL": "https://gist.githubusercontent.com/mi3law/8012fc6e6adceab35d03fd3e5da8db34/raw/58df93994f5341541809547a1d963e8ed0570a07/0_basic_clam.py",
+                                        "arch":{
+                                            "arch_i": "[1, 1, 1]",
+                                            "arch_z": "[1]",
+                                            "connector_function": "rand_conn",
+                                            "connector_parameters": "[2, 2, 2, 1]"
+                                        },
                                         "description": "the simplest, atomic arch reference design, our hello, world",
                                         "permissions": "free and open as the sea!"
                                     }
@@ -235,7 +231,11 @@
                                 "Netbox Device Discovery": {
                                     "value": {
                                         "kennel_name": "TEST-NetBox_DeviceDiscovery",
-                                        "arch_URL": "https://gist.githubusercontent.com/mi3law/ed9f4f358a0f5e3bd44011afeaa8e00d/raw/463b1529ec6c06d5c41b2eb82ebf21c71c9871b0/2_netbox-device_discovery.py",
+                                        "arch":{
+                                            "arch_i": "[1, 1, 1]",
+                                            "arch_z": "[1]",
+                                            "connector_function": "forward_full_conn"
+                                        },                                        
                                         "description": "a 30-10-neuron Agent that predicts roles of devices on NetBox, eg. https://demo.netbox.dev/dcim/devices/",
                                         "permissions": "open"
                                     }
@@ -709,9 +709,9 @@
                             }
                         },
                         "description": "ALL OPTIONAL-- parameters for fine-tuned control"
-                    },
-                "x-readme-ref-name": "KennelCreate"
-                }
+                    }
+                },
+                    "x-readme-ref-name": "KennelCreate"
             },
             "AgentResponse": {
                 "type": "object",
