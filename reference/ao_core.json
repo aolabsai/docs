@@ -203,9 +203,30 @@
                                 "x-readme-ref-name": "KennelCreate"
                             },
                             "examples": {
-                                "Basic Clam Kennel": {
+                                "Basic Clam Kennel - fully connected neurons": {
                                     "value": {
-                                        "kennel_name": "TEST-Clamologist",
+                                        "kennel_name": "TEST-Clamologist - full_conn",
+                                        "arch_i": "[1, 1, 1]",
+                                        "arch_z": "[1]",
+                                        "connector_function": "full_conn",
+                                        "description": "the simplest, atomic arch reference design, our hello, world",
+                                        "permissions": "free and open as the sea!"
+                                    }
+                                },
+                                "Basic Clam Kennel - randomly connected neurons": {
+                                    "value": {
+                                        "kennel_name": "TEST-Clamologist - rand_conn",
+                                        "arch_i": "[1, 1, 1]",
+                                        "arch_z": "[1]",
+                                        "connector_function": "rand_conn",
+                                        "connector_parameters": "[2, 2, 2, 1]",
+                                        "description": "the simplest, atomic arch reference design, our hello, world",
+                                        "permissions": "free and open as the sea!"
+                                    }
+                                },
+                                "Basic Clam Kennel - with custom instincts": {
+                                    "value": {
+                                        "kennel_name": "TEST-Clamologist - with custom instincts",
                                         "arch_URL": "https://gist.githubusercontent.com/mi3law/8012fc6e6adceab35d03fd3e5da8db34/raw/58df93994f5341541809547a1d963e8ed0570a07/0_basic_clam.py",
                                         "description": "the simplest, atomic arch reference design, our hello, world",
                                         "permissions": "free and open as the sea!"
@@ -242,15 +263,33 @@
                                         "description": {
                                             "type": "string"
                                         },
+                                        "arch_i": {
+                                            "type": "string",
+                                            "description": "specify number of input neurons as a string-ified python list, eg. `[5]` or `[1, 1, 1]`"
+                                        },
+                                        "arch_z": {
+                                            "type": "string",
+                                            "description": "specify number of output neurons as a string-ified python list, eg. `[1]` or `[1, 1]`"
+                                        },
+                                        "connector_function": {
+                                            "type": "string",
+                                            "description": "specify how to connect your neurons; use `full_conn` if uncertain and refer to docs.aolabs.ai for more"
+                                        },
+                                        "connector_parameters": {
+                                            "type": "string",
+                                            "description": "OPTIONAL-- some connector functions need extra specifications"
+                                        },
                                         "arch_string": {
                                             "type": "string",
-                                            "description": "used to spawn Agents on demand, pulled from our open source [ao_arch repo](https://github.com/aolabsai/ao_arch)"
+                                            "description": "OPTIONAL-- used to specify custom instincts; this is an advanced feature, reach out for help"
                                         },
                                         "arch_URL": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "description": "OPTIONAL-- used to specify custom instincts; this is an advanced feature, reach out for help"
                                         },
                                         "permissions": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "description": "OPTIONAL"
                                         }
                                     },
                                     "x-readme-ref-name": "Kennel"
