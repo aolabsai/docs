@@ -263,21 +263,27 @@
                                         "description": {
                                             "type": "string"
                                         },
-                                        "arch_i": {
-                                            "type": "string",
-                                            "description": "specify number of input neurons as a string-ified python list, eg. `[5]` or `[1, 1, 1]`"
-                                        },
-                                        "arch_z": {
-                                            "type": "string",
-                                            "description": "specify number of output neurons as a string-ified python list, eg. `[1]` or `[1, 1]`"
-                                        },
-                                        "connector_function": {
-                                            "type": "string",
-                                            "description": "specify how to connect your neurons; use `full_conn` if uncertain and refer to docs.aolabs.ai for more"
-                                        },
-                                        "connector_parameters": {
-                                            "type": "string",
-                                            "description": "OPTIONAL-- some connector functions need extra specifications"
+                                        "arch": {
+                                            "type": "object",
+                                            "properties": {
+                                                "arch_i": {
+                                                    "type": "string",
+                                                    "description": "specify number of input neurons as a string-ified python list, eg. `[5]` or `[1, 1, 1]`"
+                                                },
+                                                "arch_z": {
+                                                    "type": "string",
+                                                    "description": "specify number of output neurons as a string-ified python list, eg. `[1]` or `[1, 1]`"
+                                                },
+                                                "connector_function": {
+                                                    "type": "string",
+                                                    "description": "specify how to connect your neurons; use `full_conn` if uncertain and refer to docs.aolabs.ai for more"
+                                                },
+                                                "connector_parameters": {
+                                                    "type": "string",
+                                                    "description": "OPTIONAL-- some connector functions need extra specifications"
+                                                }
+                                            },
+                                            "description": "ALL OPTIONAL-- parameters for fine-tuned control"
                                         },
                                         "arch_string": {
                                             "type": "string",
@@ -681,9 +687,31 @@
                     "permissions": {
                         "type": "string",
                         "description": "coming soon"
-                    }
-                },
+                    },
+                    "arch": {
+                        "type": "object",
+                        "properties": {
+                            "arch_i": {
+                                "type": "string",
+                                "description": "specify number of input neurons as a string-ified python list, eg. `[5]` or `[1, 1, 1]`"
+                            },
+                            "arch_z": {
+                                "type": "string",
+                                "description": "specify number of output neurons as a string-ified python list, eg. `[1]` or `[1, 1]`"
+                            },
+                            "connector_function": {
+                                "type": "string",
+                                "description": "specify how to connect your neurons; use `full_conn` if uncertain and refer to docs.aolabs.ai for more"
+                            },
+                            "connector_parameters": {
+                                "type": "string",
+                                "description": "OPTIONAL-- some connector functions need extra specifications"
+                            }
+                        },
+                        "description": "ALL OPTIONAL-- parameters for fine-tuned control"
+                    },
                 "x-readme-ref-name": "KennelCreate"
+                }
             },
             "AgentResponse": {
                 "type": "object",
