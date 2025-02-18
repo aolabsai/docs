@@ -188,9 +188,27 @@
                                         "type": "string",
                                         "description": "name your collection of Agents, possible after their/your application"
                                     },
-                                    "arch_URL": {
-                                        "type": "string",
-                                        "description": "link to a raw URL arch file hosted on gists.github.com"
+                                    "arch": {
+                                        "type": "object",
+                                        "properties": {
+                                            "arch_i": {
+                                                "type": "string",
+                                                "description": "Stringified python list of input neurons (min 3)"
+                                            },
+                                            "arch_z": {
+                                                "type": "string",
+                                                "description": "Stringified python list of input neurons (min 3)"
+                                            },
+                                            "connector_function": {
+                                                "type": "string",
+                                                "description": "specify how to connect your neurons; use `full_conn` if uncertain and refer to docs.aolabs.ai for more"
+                                            },
+                                            "connector_parameters": {
+                                                "type": "string",
+                                                "description": "specify extra connection parameters"
+                                            },
+                                        "description": "Specify your arch parameters-- how many input and output neurons and how they're connected, for more: https://docs.aolabs.ai/docs/arch"
+                                        }
                                     },
                                     "description": {
                                         "type": "string"
