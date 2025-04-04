@@ -207,8 +207,8 @@
                                                 "type": "string",
                                                 "description": "specify extra connection parameters"
                                             },
+                                        },
                                         "description": "Specify your arch parameters-- how many input and output neurons and how they're connected, for more: https://docs.aolabs.ai/docs/arch"
-                                        }
                                     },
                                     "description": {
                                         "type": "string"
