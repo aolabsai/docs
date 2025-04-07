@@ -189,6 +189,10 @@
                     "description": "name your collection of Agents, possible after their/your application",
                     "x-readme-id": "0.0"
                   },
+                  "email": {
+                    "type": "string",
+                    "description": "email tied to your developer account"
+                  },
                   "arch": {
                     "type": "object",
                     "description": "Specify your arch parameters-- how many input and output neurons and how they're connected, for more: https://docs.aolabs.ai/docs/arch",
@@ -432,6 +436,10 @@
                   "agent_id": {
                     "type": "string",
                     "description": "locally unique id matching user or customer id"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "email tied to your developer account"
                   },
                   "INPUT": {
                     "type": "string",
