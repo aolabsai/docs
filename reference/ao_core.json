@@ -555,6 +555,7 @@
                   "value": {
                     "kennel_id": "TEST-Clamologist",
                     "agent_id": "1st of Clams",
+                    "email": "name@example.com",
                     "request": "story"
                   }
                 }
