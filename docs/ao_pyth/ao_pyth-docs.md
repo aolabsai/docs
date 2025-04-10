@@ -1,0 +1,90 @@
+# The python package wrapper of the ao_core API.
+
+This python repo wraps our api in a easy to use fast pip installable package. It is almost one to one with ao_core so most of the documentation will carry over here; we will add documentation below for futher instructions on how to use the library!
+
+## Installation
+
+Install with pip from command line with:
+```bash
+pip install git+https://github.com/aolabsai/ao_python
+```
+
+## Authentication & API keys
+To get an API key, please message us on discord: https://discord.gg/mE3WBFaMQy
+
+## Documentation
+
+#### To create a new Arch use:
+```python
+arch = ao.Arch(arch_i="[1, 1, 1]", arch_z="[1]", connector_function="full_conn",
+               api_key=api_key, kennel_name=<<insert_unique_ID>>)
+```
+
+### Parameters:
+* **arch_i**
+* **arch_z**
+* **arch_c**
+* **connector_function**
+* **connector_parameters**
+* **description**
+* **api_key** - *required*
+* **kennel_id**
+* **permissions** 
+* **arch_url**
+* **stage**
+
+
+
+
+#### To initalise an Agent either of the 2 options below:
+
+1.
+
+```python
+agent = ao.Agent(Arch=arch, 
+                 api_key=api_key)
+```
+
+2.
+
+```python
+agent = ao.Agent(kennel_id=<unique kennel id>, 
+                 api_key=api_key)
+```
+
+### Parameters:
+* **Arch**
+* **api_key** - *required*
+* **kennel_id**
+* **uid** 
+* **stage**
+
+
+#### To invoke/ Train an Agent to get its output, use its next_state method:
+```python
+agent.next_state(INPUT="111"):
+
+response = agent.next_state(INPUT=input, LABEL=label)
+agent_output = response["story"] # this is the output of the agent for use in your application
+agent_state  = response["state"]
+print("Agent's response: ", agent_output, " - at state: ", agent_state)
+```
+
+### Parameters:
+* **INPUT** - *required*
+* **LABEL**
+* **Instincts**
+* **Cneg**
+* **Cpos**
+* **LABEL**
+* **DD**
+* **Hamming**
+* **Default**
+* **unsequenced**
+
+
+
+#### To delete an Agent from our hosted database use:
+```python
+agent.delete()
+```
