@@ -23,15 +23,19 @@ next:
       title: Archs repo & reference designs
       url: https://github.com/aolabsai/archs
 ---
-A Kennel is a collection object used to keep track of Agents in our API and associated cloud (AWS) backend; Agents are child to a Kennel.
+A Kennel is a collection object used to keep track of Agents in the API and cloud backend; Agents are child to a Kennel.
 
-Kennels are initialized with with an Arch, which you provide through a raw Github link, like this [example for our Basic Clam Agent](https://gist.github.com/mi3law/8012fc6e6adceab35d03fd3e5da8db34#file-0_basic_clam-py) for the `arch_URL` parameter.
+kennels are created with a set of parameters defining their structure and how neurons are connected to each other.
+`arch_i` is the number of input neurons
+`arch_z` is the number of output neurons
+`connector_function` is the method of connecting neurons
+`connector_parameters` are parameters for the connector function, these depend on the function as some take no parameters
 
 > 📘 Start with a reference design
 >
 > You can find 2 more Archs to fork and modify to suit your application in our [open ao\_arch repo](https://github.com/aolabsai/ao_arch/blob/main/Architectures/0_basic_clam.py).//
 
-What goes into an Arch and how do you create one? [Read our Archs guide](https://docs.aolabs.ai/docs/arch).
+What goes into an Arch and how do you create one? [Read the Archs guide](https://docs.aolabs.ai/docs/arch).
 
 > 🚧 Need help?
 >
