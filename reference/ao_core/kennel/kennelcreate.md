@@ -26,10 +26,10 @@ next:
 A Kennel is a collection object used to keep track of Agents in the API and cloud backend; Agents are child to a Kennel.
 
 kennels are created with a set of parameters defining their structure and how neurons are connected to each other.
-`arch_i` is the number of input neurons
-`arch_z` is the number of output neurons
-`connector_function` is the method of connecting neurons
-`connector_parameters` are parameters for the connector function, these depend on the function as some take no parameters
+- `arch_i` is the number of input neurons
+- `arch_z` is the number of output neurons
+- `connector_function` is the method of connecting neurons
+- `connector_parameters` are parameters for the connector function, these depend on the function as some take no parameters
 
 > 📘 Start with a reference design
 >
