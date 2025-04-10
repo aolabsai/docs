@@ -1,6 +1,6 @@
 ---
 title: Quick Start Steps
-excerpt: Taking you from a reference design to running Agent(s)
+excerpt: Taking you from a reference design to running Agents
 deprecated: false
 hidden: false
 metadata:
@@ -10,9 +10,13 @@ metadata:
 next:
   description: ''
 ---
-We welcome your feedback at v0.1.2 of our API and code.
+# TODO: add link to python API wrapper where appropriate
 
-Before your endeavor to build an Agent custom to your application, run through this guide to get familiar with our system, and please let us know if you make it through by pinging us on discord!
+We welcome your feedback at v0.1.4 of our API and code.
+
+Before your endeavor to build an Agent custom to your application, run through this guide to get familiar with our system, and please let us know if you make it through by pinging us on [discord](https://discord.com/invite/Zg9bHPYss5)!
+
+Before starting, you should understand a bit about how our agents' inputs and outputs are structured. Inputs and outputs to our agents are sequences of 0s and 1s. These 1s and 0s could represent flags or conversions from numbers, for example a 5 could be converted to its binary representation of 101 for an input or label. If you want an agent to take in numbers converted to binary and know they'll be between 0 and 5, you could do that with 3 neurons.
 
 <br />
 
@@ -90,11 +94,24 @@ Designing your own Arch is something we're especially happy to help with! [Chat 
 
 <br />
 
-# Step 3) Upload your Arch to our API with the [create Kennel](ref:kennelcreate) call
+# Step 3) Upload your Arch to our API with the [kennelCreate](ref:kennelcreate) call
 
-Host your Arch in a [GitHub Gist](https://gist.github.com/)-- you'll use the [raw GitHub URL *like this*](https://gist.githubusercontent.com/mi3law/8012fc6e6adceab35d03fd3e5da8db34/raw/58df93994f5341541809547a1d963e8ed0570a07/0_basic_clam.py) of your Arch to upload to our API.
+The API needs an arch before you can start creating and using agents. To send an arch to our API you'll need to use our kennelCreate call. That can be done with a POST request or through our python API wrapper. 
 
-You're also welcome to fork and pull request our [Archs repo](https://github.com/aolabsai/archs) so we can review your custom Arch.
+If you send in your request would look something like this. Our [kennelCreate](ref:kennelcreate) page can give you an idea of how you'd use it in a couple different languages.
+```json
+{
+  "kennel_name": "my kennel"
+  "arch": {
+    "arch_i": "[1, 1, 1]",
+    "arch_z": "[1]",
+    "connector_function": "full_conn"
+  },
+  "email": "name@example.com",
+  "description": "the simplest, atomic arch reference design, our hello, world",
+  "permissions": "free and open as the sea!"
+}
+```
 
 > 📘 If you don't have an API key, [request one on discord](https://discord.gg/nHuJc4Y4n7).
 
@@ -110,7 +127,7 @@ Agents are created dynamically as you call them (in other words, if you invoke a
 
 # Now, what will you build?
 
-Here are some high-level sketches of applications we're exploring as within scope of v0.1.2.
+Here are some high-level sketches of applications we're exploring as within scope of v0.1.4.
 
 <HTMLBlock>{`
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVM92gM2Y=/?moveToViewport=151636,-78346,14005,5440&embedId=26026240606" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
