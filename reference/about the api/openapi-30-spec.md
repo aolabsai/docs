@@ -5,7 +5,7 @@ deprecated: false
 hidden: false
 link:
   new_tab: true
-  url: https://github.com/aolabsai/archs/blob/main/core_api.yaml
+  url: https://github.com/aolabsai/docs/blob/v0.1.4/reference/ao_core.json
 metadata:
   title: ''
   description: ''
