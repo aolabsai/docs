@@ -434,11 +434,11 @@
                 "properties": {
                   "kennel_id": {
                     "type": "string",
-                    "description": "unique id, generated during beta as <your_kennel_name>"
+                    "description": "identifier for your kennel"
                   },
                   "agent_id": {
                     "type": "string",
-                    "description": "locally unique id matching user or customer id"
+                    "description": "id for your agent, could match user or customer id"
                   },
                   "email": {
                     "type": "string",
@@ -446,7 +446,7 @@
                   },
                   "INPUT": {
                     "type": "string",
-                    "description": "binary INPUT to Agent; number of binary digits is specified by Agent Arch I neurons"
+                    "description": "binary INPUT to Agent; number of binary digits is specified by number of Agent's Arch I neurons"
                   },
                   "LABEL": {
                     "type": "string",
@@ -473,14 +473,14 @@
                       },
                       "states": {
                         "type": "integer",
-                        "description": "number of times an Agent moves to the next state"
+                        "description": "number of times an Agent moves to the next state before returning"
                       },
                       "neuron": {
                         "type": "object",
                         "properties": {
                           "DD": {
                             "type": "boolean",
-                            "description": "neuron look-up happens 1st according to discrimination distance (treating the lookup table 1-D weights)"
+                            "description": "neuron look-up happens 1st according to discrimination distance (Using the lookup table's 1-D weights)"
                           },
                           "Hamming": {
                             "type": "boolean",
@@ -776,15 +776,16 @@
         "properties": {
           "kennel_id": {
             "type": "string",
-            "description": "unique id, generated during beta as <your_kennel_name>"
+            "description": "identifier for your kennel"
           },
           "agent_id": {
             "type": "string",
             "description": "locally unique id matching user or customer id"
+            "description": "id for your agent, could match user or customer id"
           },
           "INPUT": {
             "type": "string",
-            "description": "binary INPUT to Agent; number of binary digits is specified by Agent Arch I neurons"
+            "description": "binary INPUT to Agent; number of binary digits is specified by the number of Agent Arch I neurons"
           },
           "LABEL": {
             "type": "string",
@@ -818,7 +819,7 @@
                 "properties": {
                   "DD": {
                     "type": "boolean",
-                    "description": "neuron look-up happens 1st according to discrimination distance (treating the lookup table 1-D weights)"
+                    "description": "neuron look-up happens 1st according to discrimination distance (using the lookup table's 1-D weights)"
                   },
                   "Hamming": {
                     "type": "boolean",
