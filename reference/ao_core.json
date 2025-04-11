@@ -434,11 +434,11 @@
                 "properties": {
                   "kennel_id": {
                     "type": "string",
-                    "description": "unique id, generated during beta as <your_kennel_name>"
+                    "description": "unique id of your kennel"
                   },
                   "agent_id": {
                     "type": "string",
-                    "description": "locally unique id matching user or customer id"
+                    "description": "unique id of your agent, could be user or customer id"
                   },
                   "email": {
                     "type": "string",
