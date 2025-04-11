@@ -186,7 +186,7 @@
                 "properties": {
                   "kennel_name": {
                     "type": "string",
-                    "description": "name your collection of Agents, possible after their/your application",
+                    "description": "name your collection of Agents, possibly after your application",
                     "x-readme-id": "0.0"
                   },
                   "email": {
