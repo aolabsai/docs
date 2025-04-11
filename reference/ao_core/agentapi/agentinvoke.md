@@ -27,30 +27,33 @@ next:
 ---
 From a **Kennel**, invoke a specific **Agent** with an **Input** to get its **Output**
 
-There are 2 training modes-- manual learning with Labels or automatic learning through triggering Instincts.
+Agents are trained with labels or flags for C-Positive or C-Negative. 
 
-### Manual Learning (via Labels)
+Training occurs if a label or C-flag is in the post request, otherwise it infers based on the input and prior state.
 
-If **`LABEL = "a label in binary"`** is provided, the Agent's Output will match the Label, and the Agent will learn to associate the Input with the Output-Label, weighted against Agents' past associations.
+### Learning via Labels
 
-### Automatic Learning (via Instincts)
+If there is a label in a request, the Agent's Output will match the Label, and the Agent will learn to associate the Input with the Output-Label, weighted against Agents' past associations.
 
-When **`INSTINCTS = True`**, if Input triggers Agent's Instincts, the Agent will learn to associate the current Input with *its previous Output* as from the Agent's perspective it was the previous output that lead it to the input which triggered its instincts. **In other words, training without labels! The Agent self-labels, self-associates.** 
+### Learning via C-Positive and C-Negative
+The C-Positive and C-Negative flags are the CP and CN boolean flags in a control object in a request.
+
+When training with C-Positive, the agent trains on the supplied input and the previous output.
+
+When training with C-Negative, the agent trains on a flip of the supplied input and a bit flip of the previous output. 
 
 ### Training Notes:
-
-* Labels override Instincts.
-* If the trigger is positive (pleasure) then it will reinforce the associated behavior; if the trigger is negative (pain), the Agent will do the opposite of output next time, diminishing or disassociating the behavior.
-* You pre-program instincts in Agent Arch, triggered by fixed/static conditions on Input or other neurons instead of pre-training; [details here](https://docs.aolabs.ai/docs/arch-config).
+* When training, the priority order is labels > C-Negative > C-Positive.
+* If the trigger is positive (pleasure) then it reinforces the associated behavior; if the trigger is negative (pain), the Agent will do the opposite of output next time, diminishing or disassociating the behavior.
 
 ### Miscellaneous Functions (request)
 
-* Agent Deletion (delete_agent): Removes the agent from the database and temporarily stores it in buffer memory for potential recovery.
-* agent Retrieval (retrieve_agent): A deleted agent can be restored from buffer memory if needed.
+* Agent Deletion (delete_agent): Removes the agent from the database and temporarily stores it in buffer storage for potential recovery.
+* agent Retrieval (retrieve_agent): A deleted agent can be restored from buffer storage if needed.
 * Fetching Agent History (story): Retrieves the previous states of an agent. 
 
 > 📘 Sequenced Learning
 >
 > By default, Agents learn sequenced or time series data-- their next move is informed by their immediate past action. 
 >
-> If your data are not in a stream or consistent sequence, such as a table of information (our Netbox example), then set **`US = True`** to introduce a random binary state as reset between Agent invocations.
+> If your data isn't in a stream or consistent sequence, such as a table of information (the Netbox example), then set **`US = True`** to introduce a random binary state as reset between Agent invocations.
