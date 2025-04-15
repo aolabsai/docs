@@ -11,97 +11,48 @@ next:
   description: ''
 ---
 # TODO: add link to python API wrapper where appropriate
+# TODO: add links to arch references
 
 We welcome your feedback at v0.1.4 of our API and code.
 
-Before your endeavor to build an Agent custom to your application, run through this guide to get familiar with our system, and please let us know if you make it through by pinging us on [discord](https://discord.com/invite/Zg9bHPYss5)!
+Before you start building an Agent custom to your application, run through this guide to get familiar with our system, and please let us know if you make it through by pinging us on [discord](https://discord.com/invite/Zg9bHPYss5)!
 
 Before starting, you should understand a bit about how our agents' inputs and outputs are structured. Inputs and outputs to our agents are sequences of 0s and 1s. These 1s and 0s could represent flags or conversions from numbers, for example a 5 could be converted to its binary representation of 101 for an input or label. If you want an agent to take in numbers converted to binary and know they'll be between 0 and 5, you could do that with 3 neurons.
 
 <br />
 
-# Step 1) Pick a reference design to use as a template
+# Step 1) Determine the input-output structure of your agent
 
-We have 3 Agents to start you off, each configured with an Arch relative to its application.
+Inputs and outputs need to be structured in a way the system can interpret and the agents need to be built to handle those inputs and respond with an appropriate output.
 
-<Table align={["left","left","left","left"]}>
-  <thead>
-    <tr>
-      <th style={{ textAlign: "left" }}></th>
-      <th style={{ textAlign: "left" }}></th>
-      <th style={{ textAlign: "left" }}></th>
-      <th style={{ textAlign: "left" }}></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        [Basic Clam](https://aolabs.streamlit.app/)
-      </td>
-      <td style={{ textAlign: "left" }}>
-        [App Code](https://github.com/aolabsai/archs/blob/main/Applications/HelloWorld-BasicClam/Clam_App.py)
-      </td>
-      <td style={{ textAlign: "left" }}>
-        [Arch](https://github.com/aolabsai/archs/blob/main/0_basic_clam.py)
-      </td>
-      <td style={{ textAlign: "left" }}>
-        a simple Agent that can associate A or B with output without labels
-      </td>
-    </tr>
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        [NetBox Device Discovery](https://aolabs-netbox.streamlit.app/)
-      </td>
-      <td style={{ textAlign: "left" }}>
-        [App Code](https://github.com/aolabsai/archs/blob/application/Netbox_devicediscovery/Applications/Netbox/Device_Discovery/Main_Page.py)
-      </td>
-      <td style={{ textAlign: "left" }}>
-        [Arch](https://github.com/aolabsai/archs/blob/main/2_netbox-device_discovery.py)
-      </td>
-      <td style={{ textAlign: "left" }}>
-        a scaled up version of the Basic Clam that learns to predict a network device's role from its manufacture, type, and site; learns with labels
-      </td>
-    </tr>
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        MNIST Benchmark
-      </td>
-      <td style={{ textAlign: "left" }}>
-        Coming Soon
-      </td>
-      <td style={{ textAlign: "left" }}>
-        [Arch](https://github.com/aolabsai/archs/blob/main/1_basic_MNIST.py)
-      </td>
-      <td style={{ textAlign: "left" }}>
-        *streamlit application coming soon*; a single-channel Agent trained on input-output image-label pairs to identify 0-9 from the handwritten numbers of the
-        [MNIST database](https://en.wikipedia.org/wiki/MNIST_database).
-      </td>
-    </tr>
-  </tbody>
-</Table>
+Since these agents operate on binary data we'll start with determining how many digits will be in the agent's input and output. The two variables we'll focus on are `arch_i` and `arch_z`, determining the best `connector_function` can come after testing some things out.
 
-<br />
+This boils down to choosing an appropriate number of neurons for the input and outputs.
+```python
+#simple example
+arch_i = [25]
+arch_z = [10]
 
-# Step 2) Fork an Arch and modify it to suit your application
+#TODO: use wrapper
 
-Modify the Arch script to suit your application needs. This involves changing the number of input, output, and control neurons to match your data model. The Arch script is also where you define custom triggers for learning through instinct control neurons.
 
-Here's a tutorial to walk you through the steps:
-
-<TutorialTile backgroundColor="#8701f4" emoji="🛠️" id="66d6cda01fab5100441176ff" link="https://docs.aolabs.ai/v0.1.2/recipes/create-a-custom-arch" slug="create-a-custom-arch" title="Create a custom Arch" /> 
+```
 
 Designing your own Arch is something we're especially happy to help with! [Chat on discord](https://discord.gg/Zg9bHPYss5) or book a [meeting](https://calendly.com/aee/meeting).
+## Examples
+
+If you simply want binary flags for the presence of an input, you could do something like the basic clam. If you want to convert integer ids into inputs you could do something like the netbox device discovery example. If you want to work with images, you should take a look at the MNIST example.
 
 <br />
 
-# Step 3) Upload your Arch to our API with the [kennelCreate](ref:kennelcreate) call
+# Step 2) Upload your Arch to the API with the [kennelCreate](ref:kennelcreate) call
 
 The API needs an arch before you can start creating and using agents. To send an arch to our API you'll need to use our kennelCreate call. That can be done with a POST request or through our python API wrapper. 
 
-If you send in your request would look something like this. Our [kennelCreate](ref:kennelcreate) page can give you an idea of how you'd use it in a couple different languages.
+If you send your data through requests, the JSON would look something like this. Our [kennelCreate](ref:kennelcreate) page can give you an idea of how you'd use it in a couple different languages.
 ```json
 {
-  "kennel_name": "my kennel"
+  "kennel_id": "my_kennel"
   "arch": {
     "arch_i": "[1, 1, 1]",
     "arch_z": "[1]",
@@ -117,9 +68,20 @@ If you send in your request would look something like this. Our [kennelCreate](r
 
 <br />
 
-# Step 4) Then use [Agent invoke](ref:agentinvoke) to dynamically create and use Agents
+# Step 3) Then use [Agent invoke](ref:agentinvoke) to dynamically create and use Agents
 
 Agents are created dynamically as you call them (in other words, if you invoke an Agent that doesn't exist yet, it'll be created). Build as many Agents as you need, per-user or otherwise. Agents maintain their own persistent memory.
+
+The JSON for invoking an agent would look something like this, and could be sent using the same methods you use for the kennel create call. Examples can be generated for multiple languages on our [agentInvoke](ref:agentinvoke) page.
+```json
+{
+    "kennel_id": "my_kennel",
+    "agent_id": "agent_1",
+    "email": "name@example.com",
+    "INPUT": "000",
+    "LABEL": "0",
+}
+```
 
 <br />
 
