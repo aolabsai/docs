@@ -16,9 +16,6 @@ next:
     - type: basic
       slug: concept
       title: Conceptual Summary
-    - type: basic
-      slug: basic-clam
-      title: '"Hello, World," a Clam-level AGI'
     - type: endpoint
       slug: agentinvoke
       title: Agent invoke

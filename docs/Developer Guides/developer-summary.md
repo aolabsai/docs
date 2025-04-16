@@ -9,15 +9,8 @@ metadata:
   robots: index
 next:
   description: >-
-    Familiarize yourself with our approach to AI by trying our `Hello, World`
-    toy application, a clam-level general intelligence.
-
-
-    Or jump straight into the steps to spinning up your own Agents.
+    Jump straight into the steps to spinning up your own Agents.
   pages:
-    - type: basic
-      slug: basic-clam
-      title: '"Hello, World," a Clam-level AGI'
     - type: basic
       slug: building-your-own-agents
       title: Quick Start Steps

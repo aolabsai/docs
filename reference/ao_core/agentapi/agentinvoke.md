@@ -13,17 +13,7 @@ metadata:
   description: ''
   robots: index
 next:
-  description: >-
-    Try our `Hello, World` Agent, pre-loaded on our API at kennel_id
-    `v0.1.2dev/TEST-BedOfClams`. There's also a frontend app to get a feel for
-    this Agent.
-  pages:
-    - type: basic
-      slug: basic-clam
-      title: '"Hello, World," a Clam-level AGI'
-    - type: link
-      title: '"Hello, World" Demo App'
-      url: https://aolabs.streamlit.app/
+  description: ''
 ---
 From a **Kennel**, invoke a specific **Agent** with an **Input** to get its **Output**
 
