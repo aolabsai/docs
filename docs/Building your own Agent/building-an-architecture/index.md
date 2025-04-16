@@ -17,10 +17,10 @@ next:
       slug: building-an-agent
       title: Building an Agent
 ---
-In order to build an agent, we first need an architecture that will define that agent's structure. We do that with our [Arch](https://github.com/aolabsai/ao_arch) library.
+In order to build an agent, we first need an architecture that will define that agent's structure.
 
 ```python python
-from ao_arch import Arch
+from ao_core import Arch
 
 arch = Arch(
   arch_i,

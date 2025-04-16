@@ -37,7 +37,7 @@ connector_parameters = [392, 261, 784, 4]
 Putting all of this together, we'd get.
 
 ```python
-from ao_arch import Arch
+from ao_core import Arch
 
 arch_i = [8 for _ in range(28*28)]
 arch_z = [4]

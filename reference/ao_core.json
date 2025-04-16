@@ -97,7 +97,7 @@
                       },
                       "arch_string": {
                         "type": "string",
-                        "description": "used to spawn Agents on demand, pulled from our open source [ao_arch repo](https://github.com/aolabsai/ao_arch)"
+                        "description": "used to spawn Agents on demand, pulled from our open source [ao_loop1 repo](https://github.com/aolabsai/ao_loop1)"
                       },
                       "arch_URL": {
                         "type": "string"
@@ -128,7 +128,7 @@
                       },
                       "arch_string": {
                         "type": "string",
-                        "description": "used to spawn Agents on demand, pulled from our open source [ao_arch repo](https://github.com/aolabsai/ao_arch)"
+                        "description": "used to spawn Agents on demand, pulled from our open source [ao_loop1 repo](https://github.com/aolabsai/ao_loop1)"
                       },
                       "arch_URL": {
                         "type": "string"
@@ -703,7 +703,7 @@
           },
           "arch_string": {
             "type": "string",
-            "description": "used to spawn Agents on demand, pulled from our open source [ao_arch repo](https://github.com/aolabsai/ao_arch)"
+            "description": "used to spawn Agents on demand, pulled from our open source [ao_loop1 repo](https://github.com/aolabsai/ao_loop1)"
           },
           "arch_URL": {
             "type": "string"

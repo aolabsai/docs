@@ -33,7 +33,7 @@ kennels are created with a set of parameters defining their structure and how ne
 
 > 📘 Start with a reference design
 >
-> You can find 2 more Archs to fork and modify to suit your application in our [open ao\_arch repo](https://github.com/aolabsai/ao_arch/blob/main/Architectures/0_basic_clam.py).//
+> You can find 2 more Archs to fork and modify to suit your application in our [open ao\_loop1 repo](https://github.com/aolabsai/ao_loop1)
 
 What goes into an Arch and how do you create one? [Read the Archs guide](https://docs.aolabs.ai/docs/arch).
 
