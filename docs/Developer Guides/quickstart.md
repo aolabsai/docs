@@ -10,8 +10,7 @@ metadata:
 next:
   description: ''
 ---
-# TODO: add link to python API wrapper where appropriate
-# TODO: add links to arch references
+# TODO: add links to arch references in ao_loop1
 
 We welcome your feedback at v0.1.4 of our API and code.
 
@@ -27,15 +26,22 @@ Inputs and outputs need to be structured in a way the system can interpret and t
 
 Since these agents operate on binary data we'll start with determining how many digits will be in the agent's input and output. The two variables we'll focus on are `arch_i` and `arch_z`, determining the best `connector_function` can come after testing some things out.
 
-This boils down to choosing an appropriate number of neurons for the input and outputs.
+This boils down to choosing an appropriate number of neurons for the input and outputs. Here's a simple example using our [python api wrapper](doc:ao_pyth-docs).
 ```python
 #simple example
-arch_i = [25]
-arch_z = [10]
+import ao_pyth as ao
 
-#TODO: use wrapper
+arch_i = [3]
+arch_z = [1]
 
+api_key = "my_key"
 
+arch = ao.Arch(arch_i=arch_i, arch_z=arch_z, api_key=api_key, kennel_name="my_kennel")
+agent = ao.Agent(Arch=arch, api_key=api_key)
+
+response = agent.next_state(INPUT="111", LABEL="1")
+output = response["story"]
+state = response["state"]
 ```
 
 Designing your own Arch is something we're especially happy to help with! [Chat on discord](https://discord.gg/Zg9bHPYss5) or book a [meeting](https://calendly.com/aee/meeting).
@@ -47,7 +53,7 @@ If you simply want binary flags for the presence of an input, you could do somet
 
 # Step 2) Upload your Arch to the API with the [kennelCreate](ref:kennelcreate) call
 
-The API needs an arch before you can start creating and using agents. To send an arch to our API you'll need to use our kennelCreate call. That can be done with a POST request or through our python API wrapper. 
+The API needs an arch before you can start creating and using agents. To send an arch to our API you'll need to use our kennelCreate call. That can be done with a POST request or through our [python API wrapper](doc:ao_pyth-docs).
 
 If you send your data through requests, the JSON would look something like this. Our [kennelCreate](ref:kennelcreate) page can give you an idea of how you'd use it in a couple different languages.
 ```json
