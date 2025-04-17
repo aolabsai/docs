@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# TODO: add links to arch references in ao_loop1
 
 We welcome your feedback at v0.1.4 of our API and code.
 
@@ -47,7 +46,7 @@ state = response["state"]
 Designing your own Arch is something we're especially happy to help with! [Chat on discord](https://discord.gg/Zg9bHPYss5) or book a [meeting](https://calendly.com/aee/meeting).
 ## Examples
 
-If you simply want binary flags for the presence of an input, you could do something like the basic clam. If you want to convert integer ids into inputs you could do something like the netbox device discovery example. If you want to work with images, you should take a look at the MNIST example.
+If you simply want binary flags for the presence of an input, you could do something like the basic clam. If you want to convert integer ids into inputs you could do something like the [netbox device discovery example](https://github.com/aolabsai/ao_loop1/blob/main/archs/2_netbox-device_discovery.py). If you want to work with images, you should take a look at the [MNIST example](https://github.com/aolabsai/ao_loop1/blob/main/archs/1_basic_MNIST.py).
 
 <br />
 
