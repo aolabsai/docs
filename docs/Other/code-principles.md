@@ -2,7 +2,7 @@
 title: Code Principles
 excerpt: WIP
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
