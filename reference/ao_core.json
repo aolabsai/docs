@@ -708,9 +708,9 @@
                     "type": "string",
                     "description": "email tied to your developer account"
                   },
-                  "candidate_raw": {
+                  "candidate_txt": {
                     "type": "string",
-                    "description": "file name of resume (.pdf or .docx) to be uploaded and assessed"
+                    "description": "text extracted from candidate resume"
                   },
                   "candidate_info": {
                     "type": "object",
@@ -745,7 +745,7 @@
                 "Asses candidate (inference)": {
                   "value": {
                     "agent_id": "identra_main_dev_01",
-                    "candidate_raw": "Bruce_Wayne_Resume.pdf",
+                    "candidate_txt": "Copy/Past from Bruce_Wayne_Resume.pdf",
                     "email": "name@example.com",
                     "candidate_info": {
                       "name": "Bruce Wayne",
@@ -759,7 +759,7 @@
                 "Add candidate (training)": {
                   "value": {
                     "agent_id": "identra_main_dev_01",
-                    "candidate_raw": "Bruce_Wayne_Resume.pdf",
+                    "candidate_txt": "Copy/Past from Bruce_Wayne_Resume.pdf",
                     "fraud_likelihood": 0,
                     "email": "name@example.com",
                     "candidate_info": {
