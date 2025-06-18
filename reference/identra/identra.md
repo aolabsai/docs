@@ -1,8 +1,7 @@
 ---
 title:  Sandbox & API Reference
 excerpt: >-
-  post an input (with optional learning modes instinct and label) to agent to
-  evoke its output
+  Send a resume or candidate information to receive a fraud likelihood score percentage (0-100%)
 api:
   file: ao_core.json
   operationId: identra
@@ -15,5 +14,3 @@ metadata:
 next:
   description: ''
 ---
-
-TODO

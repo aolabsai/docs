@@ -49,10 +49,10 @@
     },
     {
       "name": "identra",
-      "description": "indentra top-of-funnel fraud detection main API endpoint (dev)",
+      "description": "top-of-funnel fraud detection API endpoint (dev)",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://docs.aolabs.ai/reference/identra"
+        "url": "https://docs.aolabs.ai/reference/identra-about"
       }
     }    
   ],
@@ -704,17 +704,17 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "agent_id": {
-                    "type": "string",
-                    "description": "unique id of your agent, could be user or customer id"
-                  },
-                  "candidate_raw": {
-                    "type": "string",
-                    "description": "file name (.pdf or .docx) of resume to be assessed by Identra"
-                  },
                   "email": {
                     "type": "string",
                     "description": "email tied to your developer account"
+                  },
+                  // "agent_id": {
+                  //   "type": "string",
+                  //   "description": "unique id of your agent, could be user or customer id"
+                  // },
+                  "candidate_raw": {
+                    "type": "string",
+                    "description": "file name of resume (.pdf or .docx) to be uploaded and assessed"
                   },
                   "candidate_info": {
                     "type": "object",

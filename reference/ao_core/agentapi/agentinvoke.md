@@ -1,7 +1,7 @@
 ---
 title: Agent invoke
 excerpt: >-
-  post an input (with optional learning modes instinct and label) to agent to
+  Post an input (with optional learning modes instinct and label) to agent to
   evoke its output
 api:
   file: ao_core.json
