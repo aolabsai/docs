@@ -36,7 +36,7 @@
       "description": "a collection of agents representing an application",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://docs.aolabs.ai/reference/ao_core-intro-overview"
+        "url": "https://docs.aolabs.ai/reference/kennelcreate"
       }
     },
     {
@@ -44,9 +44,17 @@
       "description": "agents, unique to application endusers or local clients",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://docs.aolabs.ai/reference/ao_core-intro-overview"
+        "url": "https://docs.aolabs.ai/reference/agentinvoke"
       }
-    }
+    },
+    {
+      "name": "identra",
+      "description": "indentra top-of-funnel fraud detection main API endpoint (dev)",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://docs.aolabs.ai/reference/identra"
+      }
+    }    
   ],
   "paths": {
     "/kennel": {
@@ -675,7 +683,156 @@
           }
         }
       }
-    }
+    },
+    "/identra": {
+      "post": {
+        "security": [
+          {
+            "AWSapiKey": []
+          }
+        ],
+        "tags": [
+          "app"
+        ],
+        "summary": "Identra API",
+        "description": "send a candidate resume or info to get a fraud detection score from 0-100%. an input (with optional learning modes instinct and label) to agent to evoke its output",
+        "operationId": "identra",
+        "requestBody": {
+          "description": "To invoke an Agent to get output, and perform miscellaneous tasks",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "agent_id": {
+                    "type": "string",
+                    "description": "unique id of your agent, could be user or customer id"
+                  },
+                  "candidate_raw": {
+                    "type": "string",
+                    "description": "file name (.pdf or .docx) of resume to be assessed by Identra"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "email tied to your developer account"
+                  },
+                  "candidate_info": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "applicant's name"
+                      },
+                      "email": {
+                        "type": "string",
+                        "description": "applicant's email address"
+                      },
+                      "phone_number": {
+                        "type": "string",
+                        "description": "phone number, prefixed by country code with no 0s or special characters (eg. 14244284001)"
+                      },
+                      "LinkedIn": {
+                        "type": "string",
+                        "description": "URL to LinkedIn account"
+                      },
+                      "GitHub": {
+                        "type": "string",
+                        "description": "URL to GitHub account"
+                      }
+                    },
+                    "description": "ALL OPTIONAL-- if not specified, candidate information is extracted from the candidate resume"
+                  }
+                },
+                "x-readme-ref-name": "Identra"
+              },
+              "examples": {
+                "Asses candidate (inference)": {
+                  "value": {
+                    "agent_id": "identra_main_dev_01",
+                    "candidate_raw": "Bruce_Wayne_Resume.pdf",
+                    "email": "name@example.com",
+                    "candidate_info": {
+                      "name": "Bruce Wayne",
+                      "email": "bruce@wayneenterprises.com",
+                      "phone_number": "18004682287",
+                      "LinkedIn": "http://linkedin.com/in/brucewayne",
+                      "GitHub": "https://github.com/brucewayne"
+                    }
+                  }
+                },
+                "Add candidate (training)": {
+                  "value": {
+                    "agent_id": "identra_main_dev_01",
+                    "candidate_raw": "Bruce_Wayne_Resume.pdf",
+                    "fraud_likelihood": 0,
+                    "email": "name@example.com",
+                    "candidate_info": {
+                      "name": "Bruce Wayne",
+                      "email": "bruce@wayneenterprises.com",
+                      "phone_number": "18004682287",
+                      "LinkedIn": "http://linkedin.com/in/brucewayne",
+                      "GitHub": "https://github.com/brucewayne"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success - candidate assessed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "state": {
+                      "type": "string",
+                      "description": "state counter of Agent"
+                    },
+                    "story": {
+                      "type": "string",
+                      "description": "OUTPUT response of Agent to INPUT (will force-match LABEL if provided)"
+                    }
+                  },
+                  "x-readme-ref-name": "IdentraResponse"
+                },
+                "examples": {
+                  "Assessment": {
+                    "value": {
+                      "fraud_likelihood": 90,
+                      "name": "Bruce Wayne",
+                      "email": "bruce@wayneenterprises.com",
+                      "phone_number": "18004682287",
+                      "applicant_info_all": "a dict of all other info, only in dev"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "uri": "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:096378249572:function:identra/invocations",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "type": "aws",
+          "parameters": {
+            "body": "$input.body"
+          },
+          "requestTemplates": {
+            "application/json": "{\n  \"body\" : $input.body\n}"
+          }
+        }
+      }
+    }    
   },
   "components": {
     "schemas": {
