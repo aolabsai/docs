@@ -54,7 +54,7 @@
         "description": "Find out more",
         "url": "https://docs.aolabs.ai/reference/identra-about"
       }
-    }    
+    }
   ],
   "paths": {
     "/kennel": {
@@ -714,6 +714,7 @@
                   },
                   "candidate_info": {
                     "type": "object",
+                    "description": "ALL OPTIONAL-- if not specified, candidate information is extracted from the candidate resume",
                     "properties": {
                       "name": {
                         "type": "string",
@@ -735,8 +736,7 @@
                         "type": "string",
                         "description": "URL to GitHub account"
                       }
-                    },
-                    "description": "ALL OPTIONAL-- if not specified, candidate information is extracted from the candidate resume"
+                    }
                   }
                 },
                 "x-readme-ref-name": "Identra"
@@ -828,7 +828,7 @@
           }
         }
       }
-    }    
+    }
   },
   "components": {
     "schemas": {
