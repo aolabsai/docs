@@ -1,5 +1,5 @@
 ---
-title: Identra Playground & Reference
+title:  Sandbox & API Reference
 excerpt: >-
   post an input (with optional learning modes instinct and label) to agent to
   evoke its output

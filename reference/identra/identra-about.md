@@ -1,16 +1,16 @@
 ---
-title: Identra Guide WIP
+title: About & Guide
 excerpt: >-
   Invoke our simplest Agent first to familiarize yourself with what an Agent can
   do
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
   robots: index
 next:
-  description: Try Identra now
+  description: Try an API call now
   pages:
     - type: endpoint
       slug: identra
