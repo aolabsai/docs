@@ -36,9 +36,9 @@ Refer to our developer playground and full API reference [here](doc:identra).
 Identra is currently free to use while in preview. To deploy at scale for your application, say hi to our team to discuss pricing and deployment options.
 
 
-## Type of Fraud (maybe?)
+## Identra use-case
 
-*A few words about top of funnel here*
+Identra is a top-of-funnel identity flagging tool designed to detect AI-generated fake and synthetic candidates as soon as they create an account or submit an application. By identifying these profiles early in the hiring process, teams can avoid unnecessary evaluations, saving an average of 3,000 minutes per open role each month. Mistakenly hiring fraudulent candidates can cost companies up to $250,000 USD per role and significantly increase the risk of malicious activity.
 
 ## How Identra is trained
 
