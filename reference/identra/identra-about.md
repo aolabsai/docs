@@ -1,7 +1,7 @@
 ---
 title: About Identra
 excerpt: >-
-  An API for top-of-funnel job applicant fraud detection
+  an API for top-of-funnel job applicant fraud detection
 deprecated: false
 hidden: false
 metadata:
@@ -16,24 +16,19 @@ next:
       title: Playground & Reference
 ---
 
-WIP https://docs.google.com/document/d/1irTbf9SqdYZaAhM01jEbRgRwzbrxe-YtkYR_xCI_yto/edit?usp=sharing
-
-
 Identra is a machine learning API that takes in candidates’ resumes and responds with a fraud likelihood score from 0-100%. This score is derived from checking and cross-referencing social proof (LinkedIn and GitHub), communication information (email and phone), and essential semantic information (extracted via an LLM), serving as a first-pass assessment of a candidate’s likelihood of being fraudulent.
 
-Identra is built to save you time and energy in the genAI-driven fraud arms race.
+Identra is built to save you time and energy in the genAI-driven fraud arms race and is simple to use:
 
-Identra is simple to use:
+  1) Input candidate – as a .docx or .pdf resume
+  2) Output fraud likelihood - a score from 0-100% + assessment information
 
-  Input candidate – in the form of a .docx or .pdf resume
-  Output fraud score from 0-100% + assessment information
-
-Refer to our developer playground and full API reference [here](doc:identra).
+Get started with our developer playground and full API reference [here](doc:identra).
 
 
 ## Pricing
 
-Identra is currently free to use while in preview. To deploy at scale for your application, say hi to our team to discuss pricing and deployment options.
+Identra is currently free to use while in preview. To deploy at scale for your application, [reach out to our team](https://form.typeform.com/to/vS8haHKz) to discuss pricing and deployment options.
 
 
 ## Identra use-case
@@ -42,7 +37,7 @@ Identra is a top-of-funnel identity flagging tool designed to detect AI-generate
 
 ## How Identra is trained
 
-Identra is trained on a dataset of resumes of both fake and real candidates that’s curated to ensure maximum variance. To improve performance for your specific application, you can further train Identra on your own data, details here. Indentra combines various 3rd party APIs to find and check candidates’ information with a proprietary lightweight AI layer that learns the implicit fraud patterns against the patterns found in real candidates, using the learned heuristics to infer likelihood of fraud of new incoming resumes.
+Identra is trained on a dataset of resumes of both fake and real candidates that’s curated to ensure maximum variance. To improve performance for your specific application, you can further train Identra on your own data, details here. Identra combines various 3rd party APIs to find and check candidates’ information with a proprietary lightweight AI layer that learns the implicit fraud patterns against the patterns found in real candidates, using the learned heuristics to infer likelihood of fraud of new incoming resumes.
 
 
 ## Fine-tuning and further training on private data
