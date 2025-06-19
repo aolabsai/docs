@@ -726,7 +726,7 @@
                       },
                       "phone_number": {
                         "type": "string",
-                        "description": "phone number, prefixed by country code with no 0s or special characters (eg. 14244284001)"
+                        "description": "applicant's phone number, prefixed by country code with no 0s or special characters (eg. 14244284001)"
                       },
                       "LinkedIn": {
                         "type": "string",
@@ -784,13 +784,29 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "state": {
+                    "message": {
                       "type": "string",
-                      "description": "state counter of Agent"
+                      "description": "Identra server response message"
                     },
-                    "story": {
+                    "fraud_likelihood": {
+                      "type": "integer",
+                      "description": "int from 0-100 in increments of 10 representing fraud likelihood, 0% to 100% likelihood of fraud"
+                    },
+                    "name": {
                       "type": "string",
-                      "description": "OUTPUT response of Agent to INPUT (will force-match LABEL if provided)"
+                      "description": "assessed candidate name as present in resume"
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "assessed candidate email"
+                    },
+                    "phone_number": {
+                      "type": "string",
+                      "description": "assessed candidate phone number, prefixed by country code with no 0s or special characters (eg. 14244284001)"
+                    },
+                    "applicant_info_all": {
+                      "type": "object",
+                      "description": "json dictionary containing all applicant information"
                     }
                   },
                   "x-readme-ref-name": "IdentraResponse"
@@ -798,6 +814,7 @@
                 "examples": {
                   "Assessment": {
                     "value": {
+                      "message": "Success - candidate assessed - reached Identra endpoint successfully, fraud score returned",
                       "fraud_likelihood": 90,
                       "name": "Bruce Wayne",
                       "email": "bruce@wayneenterprises.com",
