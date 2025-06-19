@@ -15,4 +15,4 @@ next:
   description: ''
 ---
 
-Send in the candidate's resume text (or enter their information manually) to receive a fraud assessment from Identra.
+Send in the candidate's resume text to receive a fraud assessment from Identra.
