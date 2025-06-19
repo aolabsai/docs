@@ -803,10 +803,6 @@
                     "phone_number": {
                       "type": "string",
                       "description": "assessed candidate phone number, prefixed by country code with no 0s or special characters (eg. 14244284001)"
-                    },
-                    "applicant_info_all": {
-                      "type": "object",
-                      "description": "json dictionary containing all applicant information"
                     }
                   },
                   "x-readme-ref-name": "IdentraResponse"
@@ -818,8 +814,7 @@
                       "fraud_likelihood": 90,
                       "name": "Bruce Wayne",
                       "email": "bruce@wayneenterprises.com",
-                      "phone_number": "18004682287",
-                      "applicant_info_all": "a dict of all other info, only in dev"
+                      "phone_number": "18004682287"
                     }
                   }
                 }
