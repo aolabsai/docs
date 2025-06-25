@@ -23,7 +23,7 @@ Identra is built to save you time and energy in the genAI-driven fraud arms race
   1) Input candidate – as a .docx or .pdf resume
   2) Output fraud likelihood - a score from 0-100% + assessment information
 
-Get started with our developer playground and full API reference [here](./identra.md).
+Get started with our developer playground and full API reference [here](/docs/reference/identra/identra).
 
 
 ## Pricing
