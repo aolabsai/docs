@@ -795,6 +795,22 @@
                     "phone_number": {
                       "type": "string",
                       "description": "assessed candidate phone number, prefixed by country code with no 0s or special characters (eg. 14244284001)"
+                    },
+                    "email_valid": {
+                      "type": "integer",
+                      "description": "1/True if email is valid (SMTP check passed and MX found), 0/False otherwise"
+                    },
+                    "phone_valid": {
+                      "type": "integer",
+                      "description": "1/True if phone is valid (reachable), 0/False otherwise"
+                    },
+                    "linkedin_verified": {
+                      "type": "integer",
+                      "description": "1/True if LinkedIn profile is a verified profile, 0/False otherwise"
+                    },
+                    "github_exists": {
+                      "type": "integer",
+                      "description": "1/True if GitHub profile is reachable, 0/False otherwise"
                     }
                   },
                   "x-readme-ref-name": "IdentraResponse"
@@ -806,7 +822,11 @@
                       "fraud_likelihood": 90,
                       "name": "Bruce Wayne",
                       "email": "bruce@wayneenterprises.com",
-                      "phone_number": "18004682287"
+                      "phone_number": "18004682287",
+                      "email_valid": 0,
+                      "phone_valid": 0,
+                      "linkedin_verified": 0,
+                      "github_exists": 0
                     }
                   }
                 }
