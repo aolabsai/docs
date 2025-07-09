@@ -17,10 +17,12 @@ next:
 
 Send in the candidate's resume text to receive a fraud assessment from Identra.
 
-`candidate_txt` and `candidate_raw` are mutually exclusive. When `candidate_raw` is used, it should be the base64 encoding of a pdf or docx file and be used alongside the `raw_resume_type` argument.
+`candidate_txt` and `candidate_raw` are mutually exclusive. `candidate_raw` should be the base64 encoding of a 'pdf' or 'docx' file and sent alongside the `raw_resume_type` argument.
 
 ```bash
-# A curl request using candidate_raw might look something like this (but with proper request type, url, and headers like you'd see in the sidebar)
+# A curl request using candidate_raw might look something like this
+# but with proper request type, url, and headers like you'd see in
+# the language example sidebar
 B64_ENCODED=$(base64 -i resume.pdf)
 curl ...
       --data '
