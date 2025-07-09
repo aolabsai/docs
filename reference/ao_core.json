@@ -733,6 +733,14 @@
                         "description": "URL to GitHub account"
                       }
                     }
+                  },
+                  "candidate_raw": {
+                    "type": "string",
+                    "description": "Base 64 encoding of a resume file, 'raw_resume_type' must also be supplied when using 'candidate_raw'"
+                  },
+                  "raw_resume_type": {
+                    "type": "string",
+                    "description": "file type of candidate_raw, supported types are 'pdf' and 'docx'"
                   }
                 },
                 "x-readme-ref-name": "Identra"
@@ -1018,3 +1026,4 @@
     "proxy-enabled": true
   }
 }
+
