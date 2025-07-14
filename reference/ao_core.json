@@ -21,7 +21,7 @@
   },
   "servers": [
     {
-      "url": "https://api.aolabs.ai/v0dev",
+      "url": "https://api.aolabs.ai/prod",
       "description": "aolabs on AWS, development endpoint"
     }
   ],
